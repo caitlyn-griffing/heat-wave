@@ -37,9 +37,9 @@ THEN I am again presented with current and future conditions for that city
 
 ## Important Links
 
-- [Deployed URL](https://caitlyn-griffing.github.io/Password-Generator/)
+- [Deployed URL](https://caitlyn-griffing.github.io/heat-wave/)
 
-- [GitHub URL](https://github.com/caitlyn-griffing/Password-Generator)
+- [GitHub URL](https://github.com/caitlyn-griffing/heat-wave)
 
 
 ---
