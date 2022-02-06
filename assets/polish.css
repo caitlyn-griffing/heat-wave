@@ -54,6 +54,10 @@ input {
     /* top right bottom left */
 }
 
+.current-date {
+    float: right;
+}
+
 .top-half form {
     position: relative;
     display: flex;
@@ -82,9 +86,8 @@ input {
     transition: background 0.1s ease-in-out;
 }
 
-/*! Ask Kristopher or Crystal is blue, yellow, or orange */
 .top-half form button:hover {
-    background: var(--blue);
+    background: var(--orange);
     border: 2.5px solid var(--indigo);
     box-shadow: 3px 3px 11px var(--indigo);
     color: var(--navy);
