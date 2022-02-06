@@ -1,0 +1,122 @@
+:root {
+    --main: #cc0099;
+    --orange: #ff6600;
+    --yellow: #ffcc00;
+    --indigo: #5900b3;
+    --blue: #1a66ff;
+    --navy: #001a4d;
+    --ltBlue: #00a0b0;
+    --lightText: #e6e6e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    font-size: 1.5rem;
+    background: var(--main);
+    /* color: var(--lightText); */
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+button,
+input {
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+    padding: 45px;
+}
+
+/* responsive top half */
+
+.top-half {
+    color: var(--lightText);
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 5rem;
+    letter-spacing: 0.03em;
+    padding: 0 0 30px 0;
+    /* top right bottom left */
+}
+
+.top-half form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.top-half form input {
+    font-size: 2rem;
+    height: 37px;
+    padding: 5px 5px 10px;
+    border-bottom: 3px solid;
+}
+
+.top-half form input::placeholder {
+    color: var(--navy);
+}
+
+.top-half form button {
+    background: var(--navy);
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border-radius: 7px;
+    transition: background 0.1s ease-in-out;
+}
+
+/*! Ask Kristopher or Crystal is blue, yellow, or orange */
+.top-half form button:hover {
+    background: var(--blue);
+    border: 2.5px solid var(--indigo);
+    box-shadow: 3px 3px 11px var(--indigo);
+    color: var(--navy);
+}
+
+.top-half form .msg {
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    max-width: 450px;
+    min-height: 40px;    
+}
+
+
+@media screen and (max-width: 700px) {
+    .top-half form {
+        flex-direction: column;
+    }
+
+    .top-half form input,
+    .top-half form button {
+        width: 100%;
+    }
+
+    .top-half form button {
+        margin: 20px 0 0 0;
+    }
+
+    .top-half form .msg {
+        position: static;
+        max-width: none;
+        min-height: 0;
+        margin-top: 11px;
+    }    
+}
