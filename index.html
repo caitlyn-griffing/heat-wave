@@ -24,6 +24,7 @@
                 <form>
                     <input id="searchCity" type="text" placeholder="Enter City" autofocus>
                     <button id="submit-btn" type="submit">SEARCH</button>
+                    <button id="clear-history-btn" type="submit">CLEAR</button>
                     <span class="msg"></span>
                 </form>
                 <div class="history">
@@ -34,22 +35,22 @@
         <section class="bottom-half">
             <div class="container">
                 <div class="current-weather">
-                    <p id="city-name"></p>
+                    <div id="city-name"></div>
                     <p id="weather-icon"></p>
-                    <p id="temp"></p>
-                    <p id="humidity"></p>
-                    <p id="wind-speed"></p>
-                    <p id="uv-index"></p>
+                    <p id="temp" class="current-info"></p>
+                    <p id="humidity" class="current-info"></p>
+                    <p id="wind-speed" class="current-info"></p>
+                    <div id="uviColor"><span id="uv-index"></span></div>
                 </div>
             </div>
         
             <!-- TODO: input spans -->
             <div class="forecast">
-                <div class="fore"></div>
-                <div class="fore"></div>
-                <div class="fore"></div>
-                <div class="fore"></div>
-                <div class="fore"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
             </div>
         </section>
     </div>
