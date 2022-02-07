@@ -46,16 +46,21 @@ input {
     color: var(--lightText);
 }
 
-.heading {
+
+
+.h1 {
     font-weight: bold;
     font-size: 5rem;
     letter-spacing: 0.03em;
-    padding: 0 0 30px 0;
     /* top right bottom left */
 }
 
 .current-date {
     float: right;
+    font-size: 1.7rem;
+    border-bottom: 3px dashed var(--yellow);
+    padding: 7px;
+    margin-right: 1em;
 }
 
 .top-half form {
