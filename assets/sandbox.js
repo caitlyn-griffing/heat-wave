@@ -5,6 +5,8 @@ var myKey = "8f9a11f5149a0f8020ecd4c8516f848a";
 var cityEl = document.getElementById('searchCity');
 // console.log(cityEl);
 
+var cardContainer = document.querySelector('.forecast');
+
 // GRABBING THE CURRENT DATE ELEMENT
 var currentDateEL = $(".current-date");
 
@@ -26,9 +28,28 @@ function getCity(event) {
     var lon;
 
     // CREATING VARIABLE FOR (ALL) CITY VALUE
+    
     var cityName = cityEl.value;
     console.log(cityName);
+    localStorage.setItem("newItem", JSON.stringify(cityName));
+    
 
+    var cityHistory = document.getElementById('city-history');
+    var cityNameLi = document.createElement('li');
+
+    // Capitalize and insert the city name into an li
+    cityNameLi.innerText = cityName.toUpperCase();
+    // add each li to the city history ul
+    cityHistory.append(cityNameLi);
+
+
+
+    var items = cityHistory.children.length;
+    console.log(items);
+    if(items > 5){
+        cityHistory.innerHTML = "";
+        cityHistory.append(cityNameLi);
+    }
     // DISPLAY THE SEARCHED CITY'S NAME IN THE CURRENT WEATHER CONTAINER
     $('#city-name').text(cityName.toUpperCase());
 
@@ -67,9 +88,13 @@ function getCity(event) {
             // CONSOLE LOG THE DATA of the newFetchUrl (for the specific city)
             .then(function(data) {
                 console.log(data);
+                
 
                 // GRAB AND DISPLAY THE MATCHING CURRENT-WEATHER ICON
+                var iconImg = data.current.weather[0].icon;
+                var iconUrl = "http://openweathermap.org/img/wn/" + iconImg +"@2x.png";
 
+                $('#weather-icon').attr('src', iconUrl);
 
                 // GRAB AND DISPLAY THE TEMPERATURE
                 $('#temp').text('Temperature: ' + Math.floor(data.current.temp) + " °F");
@@ -93,13 +118,58 @@ function getCity(event) {
                     $('#uviColor').css({"background-color":"rgba(225,57,116, 0.4)", "border-left":"5px solid #b30000"});
                     
                 }
+
+                
+                $('#forcastCtn').append(cards);
+                var cards = [];
+                
+                for(var i = 0; i < 5; i++) {
+                    var currentDay = moment().add(i+1, 'days').format('ll');
+                    var foreIcon = data.daily[i].weather[0].icon;
+                    var foreUrl = "http://openweathermap.org/img/wn/" + foreIcon +"@2x.png";
+
+                    // var foreInfo = data.daily[i];
+                    var card = $( `
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">
+                                <span class="date">${currentDay}</span> 
+                                <br>
+                                <img src="${foreUrl}" class="weather-icon">
+                                <br>
+                                <span class="temp">${data.daily[i].temp.day}</span> 
+                                <br>
+                                <span class="wind-speed">${data.daily[i].wind_speed}</span> 
+                                <br>
+                                <span class="humidity">${data.daily[i].humidity}</span>
+                            </p>
+                        </div>
+                    </div> 
+                    `);
+                    cards.push(card);
+                }
+               console.log(cards.forEach(element => {
+                   console.log(element[0]);
+                   document.getElementById('forecastCtn').append(element[0]);
+               }));
+
+               cityEl.value = "";
+               
+
             })
+            
         })
+        
+        
 }
+
 
 // GRAB THE SEARCH-SUBMIT BUTTON
 var button = $('#submit-btn');
 // CREATE CLICK EVENT THAT GRABS THE DATA FROM THE GETCITY FUNCTION EVERY TIME THE BUTTON IS CLICKED
 button.click(getCity);
+
+
 
 

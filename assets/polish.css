@@ -108,12 +108,25 @@ input {
     min-height: 40px;    
 }
 
+ul {
+    margin-bottom: 1px;
+    border: 1px solid #001a4d;
+}
+
+li {
+    text-align: center;
+    list-style: none;
+    margin: 2.2em auto;
+    width: 25vw;
+    color: var(--lightText);
+}
+
 .bottom-half .current-weather {
     border: 6px solid var(--navy);
     background: rgba(230, 230, 230, 0.5);
     height: auto;
     color: var(--navy);
-    margin-top: 3em;
+    margin-top: 0;
 }
 
 .current-weather p {
@@ -123,9 +136,18 @@ input {
 
 #city-name {
     font-size: 3.5rem;
-    padding: 0.2em;
-    margin: 0.3em;
+    padding-left: 0.2em;
+    margin-left: 0.3em;
     font-weight: bold;
+}
+
+.weather-icon {
+    border: 1px solid var(--navy);
+    background-color: rgba(0, 26, 77, 0.1);;
+    box-shadow: 3px 3px 7px;
+    width: 100px;
+    height: 100px;
+    margin-left: 3.3em;
 }
 
 .current-info {
@@ -144,6 +166,18 @@ input {
     font-size: 1.1em;
 }
 
+.forecast {
+    border: 1px solid #001a4d;
+    margin: 1em auto;
+    width: max-content;
+    display: flex;
+    
+}
+
+.day {
+    box-shadow: var(--navy) 3px 3px 7px;
+    margin: 1em 0.5em;
+}
 
 
 @media screen and (max-width: 760px) {

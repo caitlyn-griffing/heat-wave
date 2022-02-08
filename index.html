@@ -17,7 +17,7 @@
 <body>
     
     <div class="wrapper">
-        <section class="top-half">
+        <section class="top-half container-fluid">
             <div class="current-date"></div>
             <div class="container">
                 <div class="h1">Heat Wave</div>
@@ -27,16 +27,18 @@
                     <button id="clear-history-btn" type="submit">CLEAR</button>
                     <span class="msg"></span>
                 </form>
-                <div class="history">
-                    <ul class="city-history"></ul>
-                </div>
             </div>
+        </section>
+        <section class="history">
+            <ul id="city-history">
+                
+            </ul>
         </section>
         <section class="bottom-half">
             <div class="container">
                 <div class="current-weather">
                     <div id="city-name"></div>
-                    <p id="weather-icon"></p>
+                    <div class="weather-icon"><img src="" alt="Weather icon" id="weather-icon"></div>
                     <p id="temp" class="current-info"></p>
                     <p id="humidity" class="current-info"></p>
                     <p id="wind-speed" class="current-info"></p>
@@ -45,12 +47,23 @@
             </div>
         
             <!-- TODO: input spans -->
-            <div class="forecast">
-                <div class="day"></div>
-                <div class="day"></div>
-                <div class="day"></div>
-                <div class="day"></div>
-                <div class="day"></div>
+            <div id="forecastCtn" class="forecast container-fluid">
+                <!-- <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">
+                            <span class="date"></span> 
+                            <br>
+                            <span class="icon"></span> 
+                            <br>
+                            <span class="temp"></span> 
+                            <br>
+                            <span class="wind-speed"></span> 
+                            <br>
+                            <span class="humidity"></span>
+                        </p>
+                    </div>
+                </div> -->
             </div>
         </section>
     </div>
