@@ -55,4 +55,6 @@ THEN I am again presented with current and future conditions for that city
 
 ![Image 1](assets/images/heatwaveSS4.png)
 
+![Image 1](assets/images/heatwaveSS5.png)
+
 ---

@@ -114,14 +114,19 @@ ul {
     border: 3px solid #001a4d;
     width: max-content;
     box-shadow: 3px 3px 9px var(--navy) ;
+    background-image: url(./images/drinkingWater.jpeg);
+    /* text-align: center; */
+
 }
 
 li {
     text-align: center;
+    font-size: 1.5em;
     list-style: none;
     margin: 0.7em auto;
-    width: 25vw;
+    width: 25vw;margin-right: 1em;
     color: var(--lightText);
+    background-color: rgba(0, 26, 77, 0.5);
 }
 
 li:hover {
