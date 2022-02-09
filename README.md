@@ -46,10 +46,13 @@ THEN I am again presented with current and future conditions for that city
 
 ## Images of Deployed Web Page
 
-![Image 1](assets/images/heatwaveSS.png)
 
-<!-- ![Image 2](assets/screenshotOptions.png) -->
+![Image 1](assets/images/heatwaveSS1.png)
 
-<!-- ![Image 3](assets/screenshotPassword.png) -->
+![Image 1](assets/images/heatwaveSS2.png)
+
+![Image 1](assets/images/heatwaveSS3.png)
+
+![Image 1](assets/images/heatwaveSS4.png)
 
 ---
