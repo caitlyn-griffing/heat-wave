@@ -138,7 +138,7 @@ function getCity(event) {
                                 <br>
                                 <img src="${foreUrl}" class="weather-icon">
                                 <br>
-                                <span class="temp">${data.daily[i].temp.day}</span> 
+                                <span class="temp">${Math.round(data.daily[i].temp.day)}</span> 
                                 <br>
                                 <span class="wind-speed">${data.daily[i].wind_speed}</span> 
                                 <br>
